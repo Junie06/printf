@@ -7,10 +7,12 @@
 #include <ctype.h>
 #include "helper_functions.h"
 
+
 /**
  * Functions to print output
  */
 
+int _printf(const char *format, ...);
 int print_char(char ch);
 int print_string(const char *str);
 int print_specifier(char specifier, va_list args);
