@@ -5,11 +5,7 @@
 #include <stdint.h>
 #include <limits.h>
 #include <ctype.h>
-#include "helper_functions.h"
 
-/**
- * Functions to print output
- */
 
 int print_char(char ch);
 int print_string(const char *str);

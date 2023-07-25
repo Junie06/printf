@@ -1,4 +1,3 @@
-#include "helper_functions.h"
 #include "main.h"
 /**
  * print_char - helper function to print characters
@@ -22,9 +21,11 @@ int print_string(const char *str)
 {
 	int count = 0;
 
-	while (*str)
+	if (!str)
+		str = "(null)";
+	while (str[count])
 	{
-		putchar(*str++);
+		putchar(str[count]);
 		count++;
 	}
 	return (count);
