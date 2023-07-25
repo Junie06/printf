@@ -1,4 +1,5 @@
 #include "helper_functions.h"
+#include "main.h"
 /**
  * print_char - helper function to print characters
  * @ch: character to print

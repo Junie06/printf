@@ -5,6 +5,7 @@
 #include <stdint.h>
 #include <limits.h>
 #include <ctype.h>
+#include "main.h"
 
 /**
  * Functions to print output
