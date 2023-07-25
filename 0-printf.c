@@ -49,24 +49,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-
-/**
- * main - prints output to std using _printf function
- * Return: number of characters
- */
-
-int main(void)
-{
-	int len = _printf("Let's try to printf a simple sentence.\n");
-	int len2 = printf("Let's try to printf a simple sentence.\n");
-
-	len = _printf("Percent:[%%]\n");
-	len2 = printf("Percent:[%%]\n");
-
-	_printf("Character:[%c]\n", 'H');
-	printf("Character:[%c]\n", 'H');
-	_printf("String:[%s]\n", "I am a string !");
-	printf("String:[%s]\n", "I am a string !");
-
-	return (0);
-}
