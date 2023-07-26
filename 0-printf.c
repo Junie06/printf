@@ -39,12 +39,12 @@ int _printf(const char *format, ...)
 
 			}
 		}
-			else if (state == 1)
-			{
-				count += print_specifier(*format, args);
-				state = 0;
-			}
-			format++;
+		else if (state == 1)
+		{
+			count += print_specifier(*format, args);
+			state = 0;
+		}
+		format++;
 	}
 	va_end(args);
 	return (count);

@@ -5,8 +5,6 @@
 #include <stdint.h>
 #include <limits.h>
 #include <ctype.h>
-#include "helper_functions.h"
-
 
 /**
  * Functions to print output
