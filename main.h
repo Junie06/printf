@@ -7,16 +7,30 @@
 #include <ctype.h>
 
 /**
- * Functions to print output
+ * struct print_format - user-defined data type containing a char and
+ * function pointer
+ * @symbol: first member
+ * @func: function pointer
+ *
+ * Description: this is a user defined data type, that contains two memebers,
+ * in which the char symbol will contain characters and the function pointer,
+ * is a pointer to a function.
  */
+typedef struct print_format
+{
+	char symbol;
+	int (*func)(va_list val);
+} prt;
 
-int _printf(const char *format, ...);
-int print_char(char ch);
-int print_string(const char *str);
-int print_specifier(char specifier, va_list args);
+int print_char(va_list val);
+int print_string(va_list val);
+int print_mod(va_list val);
 int unsigned_number_to_string(uint64_t number, int base, char *buffer);
 void number_to_string(int64_t number, int base, char *buffer);
 int print_formatted_integer(int number);
-
-
-#endif
+int print_int(va_list val);
+int print_bin(va_list val);
+int print_unsigned_int(va_list val);
+int print_oct(va_list val);
+int print_hex(va_list val);
+int print_HEX(va_list val);

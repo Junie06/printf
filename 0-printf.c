@@ -6,7 +6,7 @@
  * handle conversion specifiers such as c, s, %
  * @format: it is the last preceeeding argument before the
  * variadic function
- * Return: the length of the char acters printed
+ * Return: the length of the characters printed
  *
  * State:
  * 0: regular
