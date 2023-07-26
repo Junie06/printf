@@ -18,13 +18,14 @@
  */
 typedef struct print_format
 {
-	char symbol;
-	int (*func)(va_list val);
+	char *symbol;
+	int (*func)();
 } prt;
 
+int _printf(const char * const format, ...);
 int print_char(va_list val);
 int print_string(va_list val);
-int print_mod(va_list val);
+int print_mod(void);
 int unsigned_number_to_string(uint64_t number, int base, char *buffer);
 void number_to_string(int64_t number, int base, char *buffer);
 int print_formatted_integer(int number);
@@ -34,3 +35,5 @@ int print_unsigned_int(va_list val);
 int print_oct(va_list val);
 int print_hex(va_list val);
 int print_HEX(va_list val);
+
+#endif
