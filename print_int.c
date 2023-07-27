@@ -40,18 +40,17 @@ int unsigned_number_to_string(uint64_t number, int base, char *buffer)
 
 	if (number == 0)
 	{
-		buffer++ = '0';
+		*buffer++ = '0';
 		*buffer = '\0';
 		return (1);
 	}
 	if (base < 2 || base > 36)
 	{
 		buffer[0] = '\0';
-		return;
 	}
 
 
-	while (number > 0 && cur < buf - 1)
+	while (number > 0)
 		{
 		int digit = number % base;
 

@@ -30,7 +30,7 @@ int print_string(va_list val)
 		sng = "(null)";
 	while (*sng != '\0')
 	{
-		putchar(sng++);
+		putchar(*sng++);
 		count++;
 	}
 	return (count);
