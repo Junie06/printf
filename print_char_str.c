@@ -26,9 +26,11 @@ int print_string(va_list val)
 	int count = 0;
 	const char *sng  = va_arg(val, char *);
 
+	if (!sng)
+		sng = "(null)";
 	while (*sng != '\0')
 	{
-		putchar(*sng++);
+		putchar(sng[count]);
 		count++;
 	}
 	return (count);
