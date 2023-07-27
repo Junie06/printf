@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_37 - prints the modulus character
+ * printf_mod - prints the modulus character
  * using it's ASCII value.
  * Return: 1.
  */
