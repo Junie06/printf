@@ -27,7 +27,8 @@ Here:
 		j = 9;
 		while (j >= 0)
 		{
-			if (array_fun[j].symbol[0] == format[i] && array_fun[j].symbol[1] == format[i + 1])
+			if (array_fun[j].symbol[0] == format[i]
+					&& array_fun[j].symbol[1] == format[i + 1])
 			{
 				len += array_fun[j].func(args);
 				i = i + 2;
