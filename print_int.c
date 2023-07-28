@@ -44,10 +44,14 @@ int unsigned_number_to_string(uint64_t number, int base, char *buffer)
 		*buffer = '\0';
 		return (1);
 	}
-
-
-	while (number)
+	if (base < 2 || base > 36)
 	{
+		buffer[0] = '\0';
+	}
+
+
+	while (number > 0)
+		{
 		int digit = number % base;
 
 		if (digit >= 10)

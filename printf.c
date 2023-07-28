@@ -10,7 +10,7 @@ int _printf(const char * const format, ...)
 	va_list args;
 
 	int i = 0, j, len = 0;
-	prt m[] = {
+	prt array_fun[] = {
 		{"%s", print_string}, {"%c", print_char}, {"%%", print_mod},
 		{"%i", print_int}, {"%d", print_int}, {"%b", print_bin},
 		{"%u", print_unsigned_int}, {"%o", print_oct}, {"%x", print_hex},
@@ -27,9 +27,9 @@ Here:
 		j = 9;
 		while (j >= 0)
 		{
-			if (m[j].symbol[0] == format[i] && m[j].symbol[1] == format[i + 1])
+			if (array_fun[j].symbol[0] == format[i] && array_fun[j].symbol[1] == format[i + 1])
 			{
-				len += m[j].func(args);
+				len += array_fun[j].func(args);
 				i = i + 2;
 				goto Here;
 
