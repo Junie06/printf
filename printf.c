@@ -14,7 +14,7 @@ int _printf(const char * const format, ...)
 		{"%s", print_string}, {"%c", print_char}, {"%%", print_mod},
 		{"%i", print_int}, {"%d", print_int}, {"%b", print_bin},
 		{"%u", print_unsigned_int}, {"%o", print_oct}, {"%x", print_hex},
-		{"%X", print_HEX}
+		{"%X", print_HEX}, {"%p", print_pointer}
 	};
 
 	va_start(args, format);
@@ -24,7 +24,7 @@ int _printf(const char * const format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 9;
+		j = 10;
 		while (j >= 0)
 		{
 			if (array_fun[j].symbol[0] == format[i]
